@@ -18,8 +18,9 @@
             </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input matInput placeholder="email address" value="" />
+            <input class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted && f.password.errors}"  matInput placeholder="email address" value="" />
           </mat-form-field>
+          <div *ngIf="f.email.errors.minlength">>> có ít nhát 7 kí tự</div>
         </div>
       </div>
       <div class="signup-password">
@@ -30,8 +31,9 @@
             </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input type="password" matInput placeholder="*****" value="" />
+            <input class="form-control" formControlName="password" [ngClass]="{'is-invalid':submitted && f.password.errors}"  type="password" matInput placeholder="*****" value="" />
           </mat-form-field>
+          <div *ngIf="f.password.errors.minlength">>> có ít nhát 6 kí tự</div>
         </div>
       </div>
       <p>Confirm Password</p>
