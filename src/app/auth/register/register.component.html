@@ -1,37 +1,62 @@
-<div class="">
-    <div class="signup">
-        <div class="signup-title">
-            <h2>Sign up</h2>
-        </div>
-        <div class="signup-status">
-            <p>Don’t just learn code. Learn design and code, by building real apps, collaborate and solving problems.</p>
-        </div>
-        <form class="form-signup">
-            <div class="form-email">
-                <div class="form-icon">
-                    <span class="material-icons icon">
-                        drafts
-                    </span>
-                </div>
-                <mat-form-field class="example-full-width" appearance="none">
-                    <input matInput placeholder="email address" value="">
-                </mat-form-field>
-            </div>
-            <div class="form-password">
-                <div class="form-icon">
-                    <span class="material-icons icon">
-                        lock
-                    </span>
-                </div>
-                
-                <mat-form-field class="example-full-width" appearance="none"> 
-                    <input matInput placeholder="*****" value="">
-                </mat-form-field>
-            </div>
-        </form>
-        <button type="submit" class="btn btn-outline-light btn-signup">Sign up</button>
-        <div class="singup-attention">
-            <p>By clicking on <strong>Sign up</strong>, you agree to our <strong>Terms of service</strong> and <strong>Privacy policy</strong>
-        </div>
+<div class="singup">
+  <div class="signup-body">
+    <div class="signup-title">
+      <h2>Sign up</h2>
     </div>
+    <div class="signup-status">
+      <p>
+        Don’t just learn code. Learn design and code, by building real apps,
+        collaborate and solving problems.
+      </p>
+    </div>
+    <form>
+      <div class="signup-email">
+        <div class="signup-email__input">
+          <div class="signup-email__icon">
+            <span class="material-icons icon">
+              drafts
+            </span>
+          </div>
+          <mat-form-field class="example-full-width" appearance="none">
+            <input matInput placeholder="email address" value="" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="signup-password">
+        <div class="signup-password__input">
+          <div class="signup-password__icon">
+            <span class="material-icons icon">
+              lock
+            </span>
+          </div>
+          <mat-form-field class="example-full-width" appearance="none">
+            <input type="password" matInput placeholder="*****" value="" />
+          </mat-form-field>
+        </div>
+      </div>
+      <p>Confirm Password</p>
+      <div class="confirm-password">
+        <div class="confirm-password__input">
+          <div class="confirm-password__icon">
+            <span class="material-icons icon">
+              lock
+            </span>
+          </div>
+          <mat-form-field class="example-full-width" appearance="none">
+            <input type="password" matInput placeholder="*****" value="" />
+          </mat-form-field>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary outline-light btn-signup">
+        Sign up
+      </button>
+      <div class="singup-attention">
+        <p>
+          By clicking on <strong>Sign up</strong>, you agree to our
+          <strong>Terms of service</strong> and <strong>Privacy policy</strong>
+        </p>
+      </div>
+    </form>
+  </div>
 </div>
+
