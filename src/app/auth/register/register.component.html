@@ -18,9 +18,11 @@
             </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted && f.password.errors}"  matInput placeholder="email address" value="" />
+            <input matInput placeholder="email address" value="" [(ngModel)]="user.email" />
           </mat-form-field>
-          <div *ngIf="f.email.errors.minlength">>> có ít nhát 7 kí tự</div>
+
+          <p style="color: red;" *ngIf="!user.email">Nhập email không đúng {{user.email}}</p>
+
         </div>
       </div>
       <div class="signup-password">
@@ -31,9 +33,8 @@
             </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input class="form-control" formControlName="password" [ngClass]="{'is-invalid':submitted && f.password.errors}"  type="password" matInput placeholder="*****" value="" />
+            <input type="password" matInput placeholder="*****" value="" />
           </mat-form-field>
-          <div *ngIf="f.password.errors.minlength">>> có ít nhát 6 kí tự</div>
         </div>
       </div>
       <p>Confirm Password</p>
