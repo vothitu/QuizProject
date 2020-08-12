@@ -1,43 +1,53 @@
 <div class="singup">
   <div class="signup-body">
-    <div class="signup-title">
+    <div  class="signup-title">
       <h2>Sign up</h2>
     </div>
     <div class="signup-status">
-      <p>
         Don’t just learn code. Learn design and code, by building real apps,
         collaborate and solving problems.
-      </p>
     </div>
-    <form>
+    <form class="form-signup">
       <div class="signup-email">
         <div class="signup-email__input">
           <div class="signup-email__icon">
-            <span class="material-icons icon">
-              drafts
-            </span>
+            <span class="material-icons icon">drafts </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input matInput placeholder="email address" value="" [(ngModel)]="user.email" />
+            <input
+              matInput
+              placeholder="email address"
+              [ngModelOptions]="{ standalone: true }"
+              [(ngModel)]="user.email"
+            />
           </mat-form-field>
-
-          <p style="color: red;" *ngIf="!user.email">Nhập email không đúng {{user.email}}</p>
-
+          
         </div>
+        <p style="color: red;padding-left: 2rem;" *ngIf="user.email.length < 6">
+          Nhập email không đúng {{ user.email }}
+        </p>
       </div>
       <div class="signup-password">
         <div class="signup-password__input">
           <div class="signup-password__icon">
-            <span class="material-icons icon">
+            <span class="material-icons icon ">
               lock
             </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input type="password" matInput placeholder="*****" value="" />
+            <input
+              type="password"
+              matInput
+              placeholder="*****"
+              [ngModelOptions]="{ standalone: true }"
+              [(ngModel)]="user.password"
+            />
           </mat-form-field>
         </div>
+        <p style="color: red;padding-left: 2rem;" *ngIf="user.password.length < 7">
+          Nhập password không đúng
+        </p>
       </div>
-      <p>Confirm Password</p>
       <div class="confirm-password">
         <div class="confirm-password__input">
           <div class="confirm-password__icon">
@@ -46,9 +56,19 @@
             </span>
           </div>
           <mat-form-field class="example-full-width" appearance="none">
-            <input type="password" matInput placeholder="*****" value="" />
+            <input
+              type="password"
+              matInput
+              placeholder="*****"
+              [ngModelOptions]="{ standalone: true }"
+              [(ngModel)]="user.confirmpassword"
+            />
           </mat-form-field>
+          
         </div>
+        <p style="color: red;padding-left: 2rem;" *ngIf="user.confirmpassword !== user.password">
+          Password không trùng khớp
+        </p>
       </div>
       <button type="submit" class="btn btn-primary outline-light btn-signup">
         Sign up
